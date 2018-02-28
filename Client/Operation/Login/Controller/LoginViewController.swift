@@ -29,6 +29,10 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var mobileTF: UITextField! //账号
     @IBOutlet weak var pswdTF: UITextField!   //密码
     fileprivate let loginService = LoginService.shared
+    fileprivate lazy var tencentOAuth:TencentOAuth = {
+        let tencent = TencentOAuth(appId: B.QQ_ID, andDelegate: self)!
+        return tencent
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,12 +95,30 @@ class LoginViewController: BaseViewController {
     }
     //MARK: qq登录点击事件
     @IBAction func QQButtonClick(_ sender: Any) {
-        
+        let permissions = ["get_user_info", "get_simple_userinfo", "add_t"]
+        tencentOAuth.authorize(permissions, inSafari: false)
     }
     
     
+}
+//MARK: QQ登录回调代理
+extension LoginViewController:TencentSessionDelegate {
     
+    func tencentDidLogin() {
+        let openId = tencentOAuth.openId
+        Print.dlog(openId!)
+    }
     
+    func tencentDidNotLogin(_ cancelled: Bool) {
+        
+    }
     
+    func tencentDidNotNetWork() {
+        
+    }
     
 }
+
+
+
+

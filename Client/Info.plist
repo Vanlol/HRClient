@@ -29,10 +29,20 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.hengzhan.hengruihealthy</string>
+			<string>WeChat</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wx325277be0e9f1dcc</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>QQ</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tencent1106242390</string>
 			</array>
 		</dict>
 	</array>
