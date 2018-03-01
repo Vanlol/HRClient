@@ -104,11 +104,11 @@ extension LoginViewController:TencentSessionDelegate {
     func tencentDidLogin() {
         Print.dlog("tencentDidLogin  --- \(tencentOAuth.openId)")
     }
-
+    
     func tencentDidNotLogin(_ cancelled: Bool) {
         Print.dlog("tencentDidNotLogin")
     }
-
+    
     func tencentDidNotNetWork() {
         Print.dlog("tencentDidNotNetWork")
     }
