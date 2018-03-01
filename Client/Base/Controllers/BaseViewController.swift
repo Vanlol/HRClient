@@ -81,7 +81,7 @@ class BaseViewController: UIViewController {
     
     /** 退出账号登录 **/
     public func signOut(){
-        U.setMobile(mobile: "")
+        U.setMobile(mobile: Str.No_Mobile)
         U.setUserId(Id: "")
         U.setCookie(cookie: "")
 //        let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewControllerID") as! LoginViewController

@@ -9,6 +9,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
+    
     @IBOutlet weak var headerVi: UIView!{
         didSet{
             headerVi.layer.cornerRadius = 35
@@ -29,10 +30,8 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var mobileTF: UITextField! //账号
     @IBOutlet weak var pswdTF: UITextField!   //密码
     fileprivate let loginService = LoginService.shared
-    fileprivate lazy var tencentOAuth:TencentOAuth = {
-        let tencent = TencentOAuth(appId: B.QQ_ID, andDelegate: self)!
-        return tencent
-    }()
+    
+    fileprivate var tencentOAuth:TencentOAuth!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +41,15 @@ class LoginViewController: BaseViewController {
     //MARK: 初始化导航栏
     fileprivate func initNav() {
         super.setUpBackButton()
+        tencentOAuth = TencentOAuth(appId: B.QQ_ID, andDelegate: self)
     }
     //MARK: 注册通知
     fileprivate func initNotifi() {
-        NotificationCenter.default.addObserver(self, selector: #selector(thirdLoginNotifi(notifi:)), name: Notification.Name(rawValue: B.ThirdLoginNotifi), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(thirdLoginNotifi(notifi:)), name: Notification.Name(rawValue: Str.ThirdLoginNotifi), object: nil)
     }
     //MARK: 注销方法
     deinit {
-        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: B.ThirdLoginNotifi), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: Str.ThirdLoginNotifi), object: nil)
     }
     //MARK: 第三方登录通知
     @objc func thirdLoginNotifi(notifi:Notification) {
@@ -95,28 +95,23 @@ class LoginViewController: BaseViewController {
     }
     //MARK: qq登录点击事件
     @IBAction func QQButtonClick(_ sender: Any) {
-        let permissions = ["get_user_info", "get_simple_userinfo", "add_t"]
-        tencentOAuth.authorize(permissions, inSafari: false)
+        tencentOAuth.authorize(["get_user_info", "get_simple_userinfo", "add_t"], inSafari: false)
     }
-    
     
 }
 //MARK: QQ登录回调代理
 extension LoginViewController:TencentSessionDelegate {
-    
     func tencentDidLogin() {
-        let openId = tencentOAuth.openId
-        Print.dlog(openId!)
+        Print.dlog("tencentDidLogin  --- \(tencentOAuth.openId)")
     }
-    
+
     func tencentDidNotLogin(_ cancelled: Bool) {
-        
+        Print.dlog("tencentDidNotLogin")
     }
-    
+
     func tencentDidNotNetWork() {
-        
+        Print.dlog("tencentDidNotNetWork")
     }
-    
 }
 
 

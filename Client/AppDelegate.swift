@@ -92,7 +92,7 @@ extension AppDelegate {
             let guideVC = UIStoryboard(name: "Guide", bundle: nil).instantiateViewController(withIdentifier: "GuideViewControllerID") as! GuideViewController
             window?.rootViewController = guideVC
         }else{
-            if U.getMobile() == " " {
+            if U.getMobile() == Str.No_Mobile {
                 let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewControllerID") as! LoginViewController
                 window?.rootViewController = UINavigationController(rootViewController: loginVC)
             }else{
@@ -113,7 +113,7 @@ extension AppDelegate:WXApiDelegate {
         if resp.isKind(of: SendAuthResp.classForCoder()) {
             let aresp = resp as! SendAuthResp
             if aresp.errCode == 0 {
-                NotificationCenter.default.post(name: Notification.Name(rawValue: B.ThirdLoginNotifi), object: self, userInfo: ["code":aresp.code])
+                NotificationCenter.default.post(name: Notification.Name(rawValue: Str.ThirdLoginNotifi), object: self, userInfo: ["code":aresp.code])
             }
         }
     }

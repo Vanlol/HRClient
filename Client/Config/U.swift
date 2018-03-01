@@ -64,7 +64,7 @@ class U: NSObject {
         if let al = userDefault.object(forKey: KeyMobile) as? String {
             return al
         }else{
-            return ""
+            return Str.No_Mobile
         }
     }
     //MARK: 设置手机号

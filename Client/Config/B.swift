@@ -10,10 +10,6 @@ import Foundation
 
 //基类链接
 struct B {
-    /** 接收消息通知 **/
-    static let messageNotifi = "messageNotification"
-    /** 微信登录通知 **/
-    static let ThirdLoginNotifi = "wechatDidLoginNotification"
     /** 苹果商店应用ID **/
     static let APP_ID = "1133933894000"
     /** 苹果商店应用查询地址 **/

@@ -45,7 +45,7 @@ extension AppDelegateService:SRConnectionDelegate {
             Print.dlog(MessageType)
             if MessageType == "客服-对话" {        //客服回话
                 KGXToast.showToastWithMessage("收到一条新的客服消息", duration: ToastDisplayDuration.LengthShort)
-                NotificationCenter.default.post(name: Notification.Name(rawValue: B.messageNotifi), object: false)
+                NotificationCenter.default.post(name: Notification.Name(rawValue: Str.messageNotifi), object: false)
                 let localNote = UILocalNotification()
                 localNote.alertBody = TextContent
                 UIApplication.shared.scheduleLocalNotification(localNote)

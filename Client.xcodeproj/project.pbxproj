@@ -61,6 +61,7 @@
 		474363622024178B00B7E891 /* GuideCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474363602024178B00B7E891 /* GuideCollectionCell.xib */; };
 		4756652020464997008352E5 /* QureLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756651F20464997008352E5 /* QureLoginViewController.swift */; };
 		4756652320464C3A008352E5 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4756652220464C3A008352E5 /* TencentOpenAPI.framework */; };
+		475665252046561C008352E5 /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475665242046561C008352E5 /* Str.swift */; };
 		47CB3986202973B500EFCEA8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CB3985202973B500EFCEA8 /* Login.storyboard */; };
 		47CB39882029745800EFCEA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB39872029745800EFCEA8 /* LoginViewController.swift */; };
 		47CB398F2029921100EFCEA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CB398E2029921100EFCEA8 /* Main.storyboard */; };
@@ -152,6 +153,7 @@
 		474363602024178B00B7E891 /* GuideCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCollectionCell.xib; sourceTree = "<group>"; };
 		4756651F20464997008352E5 /* QureLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QureLoginViewController.swift; sourceTree = "<group>"; };
 		4756652220464C3A008352E5 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		475665242046561C008352E5 /* Str.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
 		47CB3985202973B500EFCEA8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		47CB39872029745800EFCEA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		47CB398E2029921100EFCEA8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				474363332024162800B7E891 /* B.swift */,
+				475665242046561C008352E5 /* Str.swift */,
 				474363342024162800B7E891 /* Config.swift */,
 				474363352024162800B7E891 /* J.swift */,
 				474363362024162800B7E891 /* N.swift */,
@@ -991,6 +994,7 @@
 				47CB3991202992AD00EFCEA8 /* MainViewController.swift in Sources */,
 				474363402024162800B7E891 /* Print.swift in Sources */,
 				4743633F2024162800B7E891 /* P.swift in Sources */,
+				475665252046561C008352E5 /* Str.swift in Sources */,
 				474363512024163400B7E891 /* RestAPI.swift in Sources */,
 				474363312024162300B7E891 /* UIImage+Category.swift in Sources */,
 				474363412024162800B7E891 /* U.swift in Sources */,
