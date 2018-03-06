@@ -102,6 +102,7 @@ class MainViewController: BaseViewController {
 }
 //MARK: 扩展
 extension MainViewController {
+    //MARK: banner点击事件
     fileprivate func didClickBanner(index:Int){
         let banner = banners[index]
         if banner.ContentUrl.contains("Mobile/System/Video") { //视频咨询详情页
@@ -109,7 +110,10 @@ extension MainViewController {
         }else if banner.ContentUrl.contains("Mobile/System/Article") { //图文咨询详情页
             
         }else {
-            
+            let bannerVC = BannerViewController()
+            bannerVC.hidesBottomBarWhenPushed = true
+            bannerVC.banner = banner
+            navigationController?.pushViewController(bannerVC, animated: true)
         }
     }
 }

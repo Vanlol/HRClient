@@ -12,6 +12,7 @@ class BannerModel {
     
     var ContentUrl = ""
     var ImageUrl = ""
+    var Profile = ""
     
     
 }

@@ -63,6 +63,7 @@
 		4756652320464C3A008352E5 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4756652220464C3A008352E5 /* TencentOpenAPI.framework */; };
 		475665252046561C008352E5 /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475665242046561C008352E5 /* Str.swift */; };
 		479FF7EF204E1E5D0086BE8E /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FF7EE204E1E5D0086BE8E /* BannerModel.swift */; };
+		479FF7F1204E225E0086BE8E /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FF7F0204E225E0086BE8E /* BannerViewController.swift */; };
 		47CB3986202973B500EFCEA8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CB3985202973B500EFCEA8 /* Login.storyboard */; };
 		47CB39882029745800EFCEA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB39872029745800EFCEA8 /* LoginViewController.swift */; };
 		47CB398F2029921100EFCEA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CB398E2029921100EFCEA8 /* Main.storyboard */; };
@@ -156,6 +157,7 @@
 		4756652220464C3A008352E5 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		475665242046561C008352E5 /* Str.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
 		479FF7EE204E1E5D0086BE8E /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		479FF7F0204E225E0086BE8E /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		47CB3985202973B500EFCEA8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		47CB39872029745800EFCEA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		47CB398E2029921100EFCEA8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -462,8 +464,8 @@
 				472DB279202ACEDE00965DD1 /* Setting */,
 				472DB26F202ACEDE00965DD1 /* Mall */,
 				47CB39802029739900EFCEA8 /* Login */,
-				472DB269202AA13B00965DD1 /* Tabbar */,
 				474363442024163400B7E891 /* Guide */,
+				472DB269202AA13B00965DD1 /* Tabbar */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -600,6 +602,7 @@
 			isa = PBXGroup;
 			children = (
 				47CB3990202992AD00EFCEA8 /* MainViewController.swift */,
+				479FF7F0204E225E0086BE8E /* BannerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1006,6 +1009,7 @@
 				472DB26E202AC7D300965DD1 /* TabbarViewController.swift in Sources */,
 				4721D224202C131D00545803 /* MainCollectionCell.swift in Sources */,
 				472DB287202AD6BC00965DD1 /* PersonTableViewController.swift in Sources */,
+				479FF7F1204E225E0086BE8E /* BannerViewController.swift in Sources */,
 				4743632E2024162300B7E891 /* Int+Category.swift in Sources */,
 				474363422024162800B7E891 /* W.swift in Sources */,
 				474363302024162300B7E891 /* UIBarButtonItem+Category.swift in Sources */,

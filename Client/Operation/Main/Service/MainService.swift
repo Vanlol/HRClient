@@ -24,6 +24,7 @@ class MainService {
                 let ImageUrl = subjson["ImageUrl"].stringValue
                 banner.ImageUrl = subjson["ImageUrl"].stringValue
                 banner.ContentUrl = subjson["ContentUrl"].stringValue
+                banner.Profile = subjson["Profile"].stringValue
                 urls.append(ImageUrl)
                 banners.append(banner)
             }
