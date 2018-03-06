@@ -13,15 +13,21 @@ class MainService {
     static let config = Config()
     static let shared = MainService()
     /** 查询首页轮播图 **/
-    func loadBanner(param:[String:Any], closure:@escaping ((Any) -> Void)) {
+    func loadBanner(param:[String:Any], closure:@escaping ((Any,Any) -> Void)) {
         RestAPI.sendGetRequest(request: N.Main_Gallery, param: param, success: { (task,data) in
             var json = JSON(data!)
+            Print.dlog(json)
             var urls = [String]()
+            var banners = [BannerModel]()
             for (_,subjson) : (String,JSON) in json["Items"] {
+                let banner = BannerModel()
                 let ImageUrl = subjson["ImageUrl"].stringValue
+                banner.ImageUrl = subjson["ImageUrl"].stringValue
+                banner.ContentUrl = subjson["ContentUrl"].stringValue
                 urls.append(ImageUrl)
+                banners.append(banner)
             }
-            closure(urls)
+            closure(urls,banners)
         }) { (error) in
             Print.dlog(error!)
         }

@@ -25,9 +25,9 @@ class RegistViewController: BaseViewController {
             loginBtn.layer.cornerRadius = 5
         }
     }
-    @IBOutlet weak var mobileTF: UITextField! //账号
-    @IBOutlet weak var authcodeTF: UITextField! //短信验证码
-    @IBOutlet weak var pswdTF: UITextField!   //密码
+    @IBOutlet weak var mobileTF: UITextField!    //账号
+    @IBOutlet weak var authcodeTF: UITextField!  //短信验证码
+    @IBOutlet weak var pswdTF: UITextField!      //密码
     fileprivate let loginService = LoginService.shared
     fileprivate var count = 89
     public var openId = ""

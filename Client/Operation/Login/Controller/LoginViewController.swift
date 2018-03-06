@@ -54,7 +54,11 @@ class LoginViewController: BaseViewController {
     //MARK: 第三方登录通知
     @objc func thirdLoginNotifi(notifi:Notification) {
         let code = notifi.userInfo!["code"] as! String
-        Print.dlog(code)
+        loginService.getWeChatOpenId(code: code) { (data) in
+            if let openId = data as? String {
+                
+            }
+        }
     }
     //MARK: 忘记密码点击事件
     @IBAction func forgotPasswdButtonClick(_ sender: Any) {

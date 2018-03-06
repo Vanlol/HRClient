@@ -62,6 +62,7 @@
 		4756652020464997008352E5 /* QureLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4756651F20464997008352E5 /* QureLoginViewController.swift */; };
 		4756652320464C3A008352E5 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4756652220464C3A008352E5 /* TencentOpenAPI.framework */; };
 		475665252046561C008352E5 /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475665242046561C008352E5 /* Str.swift */; };
+		479FF7EF204E1E5D0086BE8E /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479FF7EE204E1E5D0086BE8E /* BannerModel.swift */; };
 		47CB3986202973B500EFCEA8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CB3985202973B500EFCEA8 /* Login.storyboard */; };
 		47CB39882029745800EFCEA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CB39872029745800EFCEA8 /* LoginViewController.swift */; };
 		47CB398F2029921100EFCEA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CB398E2029921100EFCEA8 /* Main.storyboard */; };
@@ -154,6 +155,7 @@
 		4756651F20464997008352E5 /* QureLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QureLoginViewController.swift; sourceTree = "<group>"; };
 		4756652220464C3A008352E5 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		475665242046561C008352E5 /* Str.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
+		479FF7EE204E1E5D0086BE8E /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		47CB3985202973B500EFCEA8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		47CB39872029745800EFCEA8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		47CB398E2029921100EFCEA8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -606,6 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				4721D22A202C357300545803 /* ProductModel.swift */,
+				479FF7EE204E1E5D0086BE8E /* BannerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1008,6 +1011,7 @@
 				474363302024162300B7E891 /* UIBarButtonItem+Category.swift in Sources */,
 				474363222024161C00B7E891 /* BaseViewController.swift in Sources */,
 				4743632C2024162300B7E891 /* Data+Category.swift in Sources */,
+				479FF7EF204E1E5D0086BE8E /* BannerModel.swift in Sources */,
 				4743632D2024162300B7E891 /* Date+Category.swift in Sources */,
 				474362ED2023F61300B7E891 /* AppDelegate.swift in Sources */,
 				472DB264202A883E00965DD1 /* RestStrClient.swift in Sources */,

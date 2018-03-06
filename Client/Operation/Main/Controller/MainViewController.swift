@@ -26,6 +26,7 @@ class MainViewController: BaseViewController {
         par["QueryLimit"] = "3"
         return par
     }()
+    fileprivate lazy var banners = [BannerModel]()
     fileprivate lazy var products = [ProductModel]()
     fileprivate lazy var videos = [VideoModel]()
     fileprivate lazy var photoes = [PhotoModel]()
@@ -49,15 +50,18 @@ class MainViewController: BaseViewController {
         contentTableVi.register(UINib(nibName: "MainTableCell", bundle: nil), forCellReuseIdentifier: "MainTableCellID")
         headerVi.addSubview(bannerVi)
         bannerVi.didClickBannerImageClosure = {(vi,index) -> Void in
-            
+            self.didClickBanner(index: index)
         }
     }
     //MARK: 加载数据
     fileprivate func loadData(){
-        mainService.loadBanner(param: ["PageIndex":"1","QueryLimit":"10","Category":"APP商城首页"]) { (data) in
+        mainService.loadBanner(param: ["PageIndex":"1","QueryLimit":"10","Category":"APP商城首页"]) { (data,mods) in
             if let urls = data as? [String] {
                 self.bannerVi.urlStrs = urls
                 self.bannerVi.reloadInfiniteCircularView()
+            }
+            if let banns = mods as? [BannerModel]{
+                self.banners = banns
             }
         }
         mainService.loadMallType(param: ["PageIndex":"1","QueryLimit":"1"]) { (data) in
@@ -96,7 +100,20 @@ class MainViewController: BaseViewController {
         }
     }
 }
-
+//MARK: 扩展
+extension MainViewController {
+    fileprivate func didClickBanner(index:Int){
+        let banner = banners[index]
+        if banner.ContentUrl.contains("Mobile/System/Video") { //视频咨询详情页
+            
+        }else if banner.ContentUrl.contains("Mobile/System/Article") { //图文咨询详情页
+            
+        }else {
+            
+        }
+    }
+}
+//MARK: UICollectionViewDataSource
 extension MainViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
@@ -113,7 +130,7 @@ extension MainViewController:UICollectionViewDataSource {
         return cell
     }
 }
-
+//MARK: UITableViewDataSource
 extension MainViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if consulteType == "video" {

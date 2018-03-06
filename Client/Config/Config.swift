@@ -17,7 +17,7 @@ enum Env {
 
 struct Config {
     /***** 切换环境修改这里 开始 ******/
-    let env = Env.dev
+    let env = Env.whyDev
     /***** 切换环境修改这里 结束 ******/
     var phpApi = ""             //php接口地址
     var javaApi = ""            //java接口地址
