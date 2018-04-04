@@ -26,6 +26,7 @@ class LoginService {
                 }catch{
                     Print.dlog(" 微信openID解析失败 \(error)")
                 }
+                
             })
         }
     }

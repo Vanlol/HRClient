@@ -13,10 +13,10 @@ target 'Client' do
   pod 'SwiftyJSON'
   pod ‘MJRefresh’
   pod ‘FMDB’
-  #pod 'RealmSwift'
+  #pod 'RealmSwift', '~> 2.10.2'
   pod 'IQKeyboardManagerSwift'
   pod 'SignalR-ObjC', '~> 2.0'
-  
+  pod 'Hyphenate'
   
   target 'ClientTests' do
     inherit! :search_paths
